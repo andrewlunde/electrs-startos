@@ -7,13 +7,13 @@ else
  set -e
  
  b_host="bitcoind.embassy"
- b_username=$(yq e '.user' /data/start9/config.yaml)
- b_password=$(yq e '.password' /data/start9/config.yaml)
+ b_username=$(yq '.user' /data/start9/config.yaml)
+ b_password=$(yq '.password' /data/start9/config.yaml)
  
  #Get blockchain info from the bitcoin rpc
  b_gbc_result=$(curl -sS --user $b_username:$b_password --data-binary '{"jsonrpc": "1.0", "id": "sync-hck", "method": "getblockchaininfo", "params": []}' -H 'content-type: text/plain;' http://$b_host:8332/ 2>&1)
  error_code=$?
- b_gbc_error=$(echo $b_gbc_result | yq e '.error' -)
+ b_gbc_error=$(echo $b_gbc_result | yq '.error' -)
  if [[ $error_code -ne 0 ]]; then
     echo "Error contacting Bitcoin RPC: $b_gbc_result" >&2
     exit 61
@@ -25,13 +25,13 @@ else
     exit 61
  fi
 
- b_block_count=$(echo "$b_gbc_result" | yq e '.result.blocks' -)
- b_block_ibd=$(echo "$b_gbc_result" | yq e '.result.initialblockdownload' -)
+ b_block_count=$(echo "$b_gbc_result" | yq '.result.blocks' -)
+ b_block_ibd=$(echo "$b_gbc_result" | yq '.result.initialblockdownload' -)
  if [ "$b_block_count" = "null" ]; then
     echo "Error ascertaining Bitcoin blockchain status: $b_gbc_error" >&2
     exit 61
  elif [ "$b_block_ibd" != "false" ] ; then
-    b_block_hcount=$(echo "$b_gbc_result" | yq e '.result.headers' -)
+    b_block_hcount=$(echo "$b_gbc_result" | yq '.result.headers' -)
     echo -n "Bitcoin blockchain is not fully synced yet: $b_block_count of $b_block_hcount blocks" >&2
     echo " ($(expr ${b_block_count}00 / $b_block_hcount)%)" >&2
     exit 61
@@ -68,7 +68,7 @@ else
         else
             #Check to make sure the electrs RPC is actually up and responding
             features_res=$(echo '{"jsonrpc": "2.0", "method": "server.features", "params": ["", "1.4"], "id": 0}' | netcat -w 1 127.0.0.1 50001)
-            server_string=$(echo $featres_res | yq e '.result.server_version')
+            server_string=$(echo $featres_res | yq '.result.server_version')
             if [ -n "$server_string" ] ; then
                 #Index is synced to tip
                 exit 0

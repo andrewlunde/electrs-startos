@@ -1,7 +1,7 @@
 ELECTRS_SRC := $(shell find ./electrs/src) electrs/Cargo.toml electrs/Cargo.lock
 CONFIGURATOR_SRC := $(shell find ./configurator/src) configurator/Cargo.toml configurator/Cargo.lock
-PKG_VERSION := $(shell yq e ".version" manifest.yaml)
-PKG_ID := $(shell yq e ".id" manifest.yaml)
+PKG_VERSION := $(shell yq ".version" manifest.yaml)
+PKG_ID := $(shell yq ".id" manifest.yaml)
 TS_FILES := $(shell find . -name \*.ts )
 
 .DELETE_ON_ERROR:

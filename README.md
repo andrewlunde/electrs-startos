@@ -15,9 +15,9 @@ See the [Develper Docs](https://docs.start9.com/latest/developer-docs/packaging)
 ## Cloning
 
 ```
-git clone https://github.com/Start9Labs/electrs-wrapper.git
+git clone https://github.com/Start9Labs/electrs-startos.git
 git submodule update --init
-cd electrs-wrapper
+cd electrs-startos
 ```
 
 ## Building

@@ -57,11 +57,11 @@ export const getConfig: T.ExpectedExports.getConfig = compat.getConfig({
   "index-lookup-limit": {
     type: "number",
     name: "Index Lookup Limit",
-    placeholder: 200,
+    placeholder: 0,
     description:
-      "Number of transactions to lookup before returning an error, to prevent 'too popular' addresses from causing the RPC server to time out. Defaults to 200.",
+      "Number of transactions to lookup before returning an error, to prevent 'too popular' addresses from causing the RPC server to time out. Defaults to no limit (0).",
     nullable: true,
-    range: "[1,10000]",
+    range: "[0,10000]",
     integral: true,
     units: "transactions",
   },

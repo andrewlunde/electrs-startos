@@ -1,9 +1,9 @@
 id: electrs
 title: "electrs"
-version: 0.10.3
+version: 0.10.3.1
 release-notes: |
-  * Update upstream electrs to [v0.10.3](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0103-feb-10-2024)
-  * Update rust docker image
+  * v0.10.3~1: Fix config bug that occurs when setting Index Lookup Limit
+  * v0.10.3: Update upstream electrs to [v0.10.3](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0103-feb-10-2024)
 license: mit
 wrapper-repo: "https://github.com/Start9Labs/electrs-wrapper"
 upstream-repo: "https://github.com/romanz/electrs"

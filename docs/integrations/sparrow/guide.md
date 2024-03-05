@@ -1,6 +1,6 @@
 # Sparrow Integration Setup
 
-Note: You will need to be running Tor on your device, find guides to set this up here: https://start9.com/latest/user-manual/connecting/connecting-tor/tor-os/index
+Note: You will need to be running Tor on your device, find guides to set this up here: https://docs.start9.com/0.3.5.x/user-manual/connecting-tor#using-native-apps
 
 1. Open Sparrow and go to "File -> Preferences -> Server," or if you are running for the first time, proceed through the introduction until the screen below. Then select "Configure Server."
 

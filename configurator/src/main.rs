@@ -34,7 +34,7 @@ fn main() -> Result<(), anyhow::Error> {
         let mut index_lookup_limit: String = "".to_string();
         if config.index_lookup_limit.is_some() {
             index_lookup_limit = format!(
-                "index_batch_size = {}",
+                "index_lookup_limit = {}",
                 config.index_lookup_limit.unwrap()
             );
         }

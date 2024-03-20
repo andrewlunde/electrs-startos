@@ -3,7 +3,7 @@ title: "electrs"
 version: 0.10.4
 release-notes: |
   * Update upstream electrs to [v0.10.4](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0104-mar-15-2024)
-  * Fix electrs-startos config bug that occured when setting Index Lookup Limit
+  * Fix electrs-startos config bug that occurred when setting Index Lookup Limit
 license: mit
 wrapper-repo: "https://github.com/Start9Labs/electrs-wrapper"
 upstream-repo: "https://github.com/romanz/electrs"

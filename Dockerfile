@@ -1,4 +1,4 @@
-FROM rust:1.76-slim-bookworm AS builder
+FROM rust:1.78-slim-bookworm AS builder
 
 RUN apt-get update -qqy && \
     apt-get upgrade -qqy && \
@@ -12,8 +12,8 @@ WORKDIR /build
 COPY ./electrs .
 ENV ROCKSDB_INCLUDE_DIR=/usr/include
 ENV ROCKSDB_LIB_DIR=/usr/lib
-RUN rustup toolchain install nightly
-RUN cargo +nightly install --locked --path .
+RUN rustup toolchain install stable
+RUN cargo +stable install --locked --path .
 
 FROM debian:bookworm-slim AS final
 

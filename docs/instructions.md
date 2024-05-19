@@ -1,7 +1,7 @@
 # Electrum Rust Server (electrs)
 
 `electrs` is an efficient re-implementation of Electrum Server written in Rust. Its main purpose is as an indexer for external wallets that use bitcoind as a backend. There are all sorts of wallets that connect to bitcoind using the Electrum protocol. This StartOS package allows you to run your own electrum server connected to your own Bitcoin Core node, which is the most private, uncensorable, yet fast and easy way to use Bitcoin.
-In order to link a wallet, check out the guides at https://github.com/start9labs/electrs-wrapper/tree/master/docs/wallets.md.
+In order to link a wallet, check out the guides at https://github.com/start9labs/electrs-startos/tree/master/docs/wallets.md.
 
 # Syncing
 

@@ -1,10 +1,9 @@
 id: electrs
 title: "electrs"
-version: 0.10.5
+version: 0.10.6
 release-notes: |
-  * Update upstream electrs to [v0.10.5](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0105-may-18-2024)
-  * Bump allowable Bitcoin Core version range
-  * Update Rust base
+  * Update upstream electrs to [v0.10.6](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0106-sep-29-2024)
+  * Update Rust base Docker image
 license: mit
 wrapper-repo: "https://github.com/Start9Labs/electrs-startos"
 upstream-repo: "https://github.com/romanz/electrs"

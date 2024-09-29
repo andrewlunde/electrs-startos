@@ -17,11 +17,7 @@ See the [Develper Docs](https://docs.start9.com/latest/developer-docs/packaging)
 ```
 git clone https://github.com/Start9Labs/electrs-startos.git
 cd electrs-startos
-git submodule update --init --recursive
-#checkout & build the latest version of electrs (v0.10.6 as of writing):
-cd electrs
-git verify-tag v0.10.6 && git checkout v0.10.6
-cd ..
+git submodule update --init
 ```
 
 ## Building

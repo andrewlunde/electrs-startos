@@ -1,5 +1,5 @@
-id: electrs
-title: "electrs"
+id: electrs-testnet
+title: "electrs (testnet4)"
 version: 0.10.6
 release-notes: |
   * Update upstream electrs to [v0.10.6](https://github.com/romanz/electrs/blob/master/RELEASE-NOTES.md#0106-sep-29-2024)
@@ -75,7 +75,7 @@ alerts:
   install: "INSTABILITY WARNING: Electrs uses up to 1GB of RAM when syncing. Please make sure you have at least this much free RAM before starting Electrs, or you will cause your system to become unresponsive! This is especially risky if running alongside services that consume a lot of RAM on a 4GB system!"
   start: "INSTABILITY WARNING: Electrs uses up to 1GB of RAM when syncing. Please make sure you have at least this much free RAM before starting Electrs, or you will cause your system to become unresponsive! This is especially risky if running alongside services that consume a lot of RAM on a 4GB system!"
 dependencies:
-  bitcoind:
+  bitcoind-testnet:
     version: ">=0.21.1.2 <29.0.0"
     requirement:
       type: "required"
